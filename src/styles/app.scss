@@ -1,4 +1,5 @@
 @import "./admin/mixin";
+@import 'home.scss';
 @import "./admin/dashboard";
 @import "./admin/products";
 @import "./admin/chart";
@@ -14,12 +15,24 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body{
+  user-select: none;
+}
+
 a {
   text-decoration: none;
   color: black;
 }
+
+$color1: white;
+$color2: rgb(46, 46, 46);
+$color3: rgb(0, 104, 136);
+
 button{
   cursor: pointer;
+  border: none;
+  background-color: #fff;
 }
 .red {
   color: red;
@@ -198,5 +211,30 @@ button{
 @keyframes loading-animation {
   to {
     transform: rotateZ(360deg) ;
+  }
+}
+
+.header{
+  @include flex(row, flex-end, stretch, 1.2rem);
+  padding: 1rem;
+  a {
+    color: $color2;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    &:hover{
+      color: $color3;
+    }
+  }
+  dialog {
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100px;
+    position: absolute;
+    left: calc(100% - 100px);
+    top: 8%;
+    >div{
+      @include flex(column, flex-start, center, 0.25rem);
+    }
   }
 }

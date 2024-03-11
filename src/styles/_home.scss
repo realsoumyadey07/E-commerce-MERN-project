@@ -1,0 +1,30 @@
+.home{
+     padding: 2rem;
+     display: flex;
+     flex-direction: column;
+     height: calc(100vh - 4rem);
+     width: 100%;
+     > section {
+          width: 100%;
+          min-height: 25rem;
+          margin: auto;
+          background-image: url('../assets/images/coverphoto.jpg');
+          background-position: center;
+          background-size: cover;
+     }
+     >h1{
+          @include heading(1px);
+          margin-top: 3rem;
+          @include flex(row, space-between, center);
+     }
+     >main{
+          width: 100%;
+          flex: 1;
+          display: flex;
+          gap: 1rem;
+          overflow-x: auto;
+          &::-webkit-scrollbar {
+               display: none;
+          }
+     }
+}
