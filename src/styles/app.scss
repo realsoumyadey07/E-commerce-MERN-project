@@ -9,15 +9,24 @@
      padding: 0;
      box-sizing: border-box;
    }
+   body{
+    user-select: none;
+   }
    
    a {
      text-decoration: none;
      color: black;
+     cursor: pointer;
    }
    button{
     background-color: transparent;
     border: none;
    }
+
+   $color: white;
+   $color2: rgb(46, 46, 46);
+   $color3: rgb(0, 104, 136);
+
    .red {
      color: red;
    }
@@ -29,13 +38,73 @@
    }
    
    @import "admin-styles/mixin";
-   
+   @import "home";
    @import "admin-styles/dashboard";
    @import "admin-styles/products";
    @import "admin-styles/chart";
    @import "admin-styles/dashboardapp";
    @import "admin-styles/mediaquery";
    
+   .header {
+    @include flex(row, flex-end, stretch, 1.2rem);
+    padding: 1rem;
+    >a{
+      font-weight: 500;
+    }
+    a {
+      color: $color2;
+      letter-spacing: 2px;
+      font-size: 1.2rem;
+      &:hover {
+        color: $color3;
+      }
+    }
+    dialog {
+      border: none;
+      @include flex(column);
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.562);
+      padding: 1rem;
+      border-radius: 5px;
+      position: absolute;
+      top: 8%;
+      left: calc(100% - 150px);
+    }
+    
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
    .admin-container {
      @include grid(1fr 4fr, 2rem);
      height: 100vh;
