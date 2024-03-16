@@ -68,6 +68,7 @@
       position: absolute;
       top: 8%;
       left: calc(100% - 150px);
+      z-index: 100;
     }
     
    }
@@ -131,7 +132,7 @@
            list-style: none;
            > li {
              padding: 0.5rem 1rem;
-             border-radius: 10px;
+             border-radius: 5px;
              a {
                color: rgba(0, 0, 0, 0.825);
                @include flex(row, unset);
@@ -249,9 +250,12 @@
      border: none;
      outline: none;
      cursor: pointer;
-     background-color: rgb(168, 2, 2);
+     background-color: rgb(39, 39, 39);
      color: white;
-     border-radius: 10px;
+     border-radius: 5px;
+     &:hover{
+      background-color: rgb(68, 68, 68);
+     }
    }
    
    .loader {
