@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { VscError } from "react-icons/vsc";
 import CartItem from "../components/CartItem";
+import { Link } from "react-router-dom";
 
 const cartItems = [
   {
@@ -37,7 +38,7 @@ const Cart = () => {
     <div className="cart">
       <main>
         {
-          cartItems.map((i, index)=><CartItem cartItem={i} key={index}/>)
+          cartItems.length > 0 ? cartItems.map((i, index)=><CartItem cartItem={i} key={index}/>) : <h1>No Item added</h1>
         }
       </main>
       <aside>
@@ -65,6 +66,11 @@ const Cart = () => {
             <span className="red">Invalied Coupon  <VscError/></span>
           )
         )}
+
+
+        {
+          cartItems.length > 0 && <Link to={'/shipping'}>Checkout</Link>
+        }
       </aside>
     </div>
   );

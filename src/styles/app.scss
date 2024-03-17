@@ -23,7 +23,7 @@
     border: none;
    }
 
-   $color: white;
+   $color1: white;
    $color2: rgb(46, 46, 46);
    $color3: rgb(0, 104, 136);
 
@@ -39,6 +39,7 @@
    
    @import "admin-styles/mixin";
    @import "home";
+   @import "cart";
    @import "admin-styles/dashboard";
    @import "admin-styles/products";
    @import "admin-styles/chart";
