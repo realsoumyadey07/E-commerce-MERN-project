@@ -40,6 +40,7 @@
    @import "admin-styles/mixin";
    @import "home";
    @import "cart";
+   @import 'shipping';
    @import "admin-styles/dashboard";
    @import "admin-styles/products";
    @import "admin-styles/chart";
@@ -233,12 +234,12 @@
      border: none;
      outline: none;
      cursor: pointer;
-     color: rgba(44, 104, 255);
+     color: black;
      position: fixed;
-     top: 1rem;
+     top: .5rem;
      left: 1rem;
-     font-size: 2rem;
-     background-color: white;
+     font-size: 1.5rem;
+     background-color: transparent;
      border-radius: 50%;
      z-index: 9;
    }

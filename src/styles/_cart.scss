@@ -15,10 +15,8 @@
      }
      > aside {
           width: 30%;
-          padding: 4rem;
+          // padding: 4rem;
           @include flex(column, center, stretch, 1.5rem);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.132);
-          border-radius: 5px;
           > input {
                padding: 1rem;
                border: none;

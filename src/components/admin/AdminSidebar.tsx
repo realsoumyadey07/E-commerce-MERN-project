@@ -8,7 +8,7 @@ import {
   FaGamepad,
   FaStopwatch,
 } from "react-icons/fa";
-import { HiMenuAlt4 } from "react-icons/hi";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { IoIosPeople } from "react-icons/io";
 import {
   RiCoupon3Fill,
@@ -41,7 +41,7 @@ const AdminSidebar = () => {
     <>
       {phoneActive && (
         <button id="hamburger" onClick={() => setShowModal(true)}>
-          <HiMenuAlt4 />
+          <GiHamburgerMenu />
         </button>
       )}
 
@@ -168,14 +168,14 @@ const Li = ({ url, text, location, Icon }: LiProps) => (
   <li
     style={{
       backgroundColor: location.pathname.includes(url)
-        ? "rgba(0,115,255,0.1)"
+        ? "rgba(90, 90, 90, 0.1)"
         : "white",
     }}
   >
     <Link
       to={url}
       style={{
-        color: location.pathname.includes(url) ? "rgb(0,115,255)" : "black",
+        color: location.pathname.includes(url) ? "rgb(90, 90, 90)" : "black",
       }}
     >
       <Icon />
