@@ -4,7 +4,7 @@ import { MdShoppingCart } from "react-icons/md";
 import { PiSignInBold, PiSignOutBold } from "react-icons/pi";
 import { Link } from "react-router-dom";
 
-const user = { _id: "", role: "" };
+const user = { _id: " ", role: " " };
 const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -52,7 +52,7 @@ const Header = () => {
                 Dahboard
               </Link>
             )}
-            <Link onClick={() => setIsOpen(false)} to={"/order"}>
+            <Link onClick={() => setIsOpen(false)} to={"/orders"}>
               Orders
             </Link>
             <button onClick={logOutHandle}>

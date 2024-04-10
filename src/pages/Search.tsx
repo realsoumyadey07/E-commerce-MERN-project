@@ -8,11 +8,9 @@ const Search = () => {
   const [category, setCategory] = useState("");
   const [page, setPage] = useState(1);
 
-  const addToCartHandler = ()=> {
-
-  }
-  const isNextPage = true;
-  const isPevPage = true;
+  const addToCartHandler = () => {};
+  const isNextPage = page < 4;
+  const isPevPage = page > 1;
   return (
     <div className="product-search-page">
       <aside>
@@ -59,18 +57,32 @@ const Search = () => {
         />
         <div className="search-product-list">
           <Productcard
-          productId="asdvfasd"
-          name="Macbook"
-          price={27436}
-          stock={347}
-          handler={addToCartHandler}
-          photo="https://m.media-amazon.com/images/I/71vFKBpKakL._AC_UY218_.jpg"
+            productId="asdvfasd"
+            name="Macbook"
+            price={27436}
+            stock={347}
+            handler={addToCartHandler}
+            photo="https://m.media-amazon.com/images/I/71vFKBpKakL._AC_UY218_.jpg"
           />
         </div>
         <article>
-          <button onClick={()=> setPage(prev=>prev - 1)}>Prev</button>
-          <span> {page} of {4} </span>
-          <button onClick={()=> setPage(prev => prev + 1)}> Next</button>
+          <button
+            disabled={!isPevPage}
+            onClick={() => setPage((prev) => prev - 1)}
+          >
+            Prev
+          </button>
+          <span>
+            {" "}
+            {page} of {4}{" "}
+          </span>
+          <button
+            disabled={!isNextPage}
+            onClick={() => setPage((prev) => prev + 1)}
+          >
+            {" "}
+            Next
+          </button>
         </article>
       </main>
     </div>

@@ -5,12 +5,10 @@ import Header from "./components/Header";
 const Home = lazy(() => import("./pages/Home"));
 const Search = lazy(() => import("./pages/Search"));
 const Cart = lazy(() => import("./pages/Cart"));
-
-
-
 const Shipping = lazy(()=> import('./pages/Shipping'));
+const Orders = lazy(()=> import('./pages/Orders'));
+const Orderdetails = lazy(()=> import('./pages/Order-details'));
 const Login = lazy(()=> import("./pages/Login"));
-
 //Admin routes importing
 const Dashboard = lazy(() => import("./pages/admin/dashboard"));
 const Products = lazy(() => import("./pages/admin/products"));
@@ -40,17 +38,14 @@ const App = () => {
           <Route path="/search" element={<Search />} />
           <Route path="/cart" element={<Cart />} />
 
-
           {/* not loggedin route */}
           <Route path="/login" element={<Login/>}/>
           {/* logedin user routes */}
           <Route>
             <Route path="/shipping" element={<Shipping/>}/>
+            <Route path="/orders" element={<Orders/>}/>
+            <Route path="/orders/:id" element={<Orderdetails/>}/>
           </Route>
-
-
-
-
 
           {/* Admin routes */}
           <Route
